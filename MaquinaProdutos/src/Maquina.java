@@ -21,16 +21,19 @@ public class Maquina {
 	
 	public double fazerCompra(int codigo){
 		Produto p = selecionarProduto(codigo);
-		double precoProduto = p.getPreco();
-		if(credito >= precoProduto){
-			lucroTotal += precoProduto;
-			credito -= precoProduto;
-			removerProduto(p);
-			double troco = darTroco(precoProduto);
-			credito = 0;
-			return troco;
+		if(p != null){
+			double precoProduto = p.getPreco();
+			if(credito >= precoProduto){
+				lucroTotal += precoProduto;
+				credito -= precoProduto;
+				removerProduto(p);
+				double troco = darTroco(precoProduto);
+				credito = 0;
+				return troco;
+			}
+			else return 0;
 		}
-		else return credito;
+		else return 0;
 	}
 	
 	private void removerProduto(Produto p){
@@ -55,9 +58,9 @@ public class Maquina {
 	}
 	
 	private double darTroco(double preco){
-		if((credito != 0) && (lucroTotal >= credito))
+		if(lucroTotal >= credito)
 			return credito;
-		else return 0;		
+		else return -1;		
 	}
 	
 	public double visualizarCredito(){

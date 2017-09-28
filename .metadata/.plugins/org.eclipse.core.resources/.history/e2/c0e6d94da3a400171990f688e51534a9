@@ -1,0 +1,58 @@
+import java.util.Scanner;
+
+public class Main {
+	
+	public static void Menu(){
+		System.out.println("1 - Inserir Moedas\n2 - Fazer Compra\n" +
+				"3 - Visualizar Credito\n4 - Visualizar Produtos\n" +
+				"5 -  Visualizar Lucro Total\n0 - Cancelar Compra");
+	}
+	
+	public static void ListarProdutos(Produto produtos[]){
+		for(int i = 0;i<produtos.length;i++){
+			System.out.println(produtos[i].getCodigo()+ " - " 
+		+produtos[i].getDescricao()+ " - " +produtos[i].getPreco());
+		}
+	}
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		Maquina maquina = new Maquina();
+		
+		Menu();
+		int op = sc.nextInt();
+		
+		while(op != 0){
+			switch (op) {
+			case 1:
+				System.out.println("Digite '50' para moedas de 50 centavos," +
+						"\n'1' para moedas de 1 real e \n'0' para parar");
+				int moeda = sc.nextInt();
+				while(moeda != 0){
+					maquina.receberCredito(moeda);
+					moeda = sc.nextInt();
+				}
+				break;
+
+			case 2:
+				ListarProdutos(maquina.visualizarProdutos());
+				System.out.println("Digite o codigo do produto que voce quer: ");
+				double troco = maquina.fazerCompra(sc.nextInt());
+				break;
+				
+			case 3:
+				
+				break;
+
+			case 0:
+				
+				break;
+				
+			default:
+				break;
+			}
+		}
+
+	}
+
+}
