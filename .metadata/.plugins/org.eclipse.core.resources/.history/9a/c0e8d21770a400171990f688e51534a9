@@ -1,0 +1,38 @@
+
+public class Maquina {
+	
+	private double credito;
+	private double lucroTotal;
+	private Moeda moeda;
+	private Produto produtos[];
+	
+	public void receberCredito(int moedas){
+		moeda.setMoeda(moedas);
+		credito += moeda.getValor();
+	}
+	
+	public Produto selecionarProduto(int codigo){
+		for(int i=0;i<produtos.length;i++){
+			if(codigo == produtos[i].getCodigo())
+				return produtos[i];
+		}
+		return null;
+	}
+	
+	public void encherMaquina(int quantidade){
+		for(int i=0;i<produtos.length;i++){
+			if(i < 10)
+				produtos[i] = new Produto(1, "coca", 2.50);
+			else if(i>9 && i <20)
+				produtos[i] = new Produto(1, "guaraná", 2.50);
+			else if(i>19 && i <30)
+				produtos[i] = new Produto(1, "guaraná", 2.50);
+		}
+	}
+	
+	public Maquina(){
+		produtos = new Produto[30];
+		
+	}
+	
+}

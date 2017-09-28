@@ -8,6 +8,9 @@ public class Moeda {
 	}
 	
 	public void setMoeda(int moeda){
-		valor += moeda;
+		if(moeda == 50) 
+			valor += 0.50;
+		else
+			valor += moeda;
 	}
 }

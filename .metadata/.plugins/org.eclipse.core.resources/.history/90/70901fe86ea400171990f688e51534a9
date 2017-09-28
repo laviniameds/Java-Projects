@@ -1,0 +1,24 @@
+
+public class Maquina {
+	
+	private double credito;
+	private double lucroTotal;
+	private Moeda moeda;
+	private Produto produtos[];
+	
+	public void receberCredito(int moedas){
+		moeda.setMoeda(moedas);
+		credito += moeda.getValor();
+	}
+	
+	public Produto selecionarProduto(int codigo){
+		for(int i=0;i<produtos.length;i++){
+			if(produto == produtos[i].getCodigo())
+				return produto[i];
+		}
+		return null;
+	}
+	
+	
+	
+}

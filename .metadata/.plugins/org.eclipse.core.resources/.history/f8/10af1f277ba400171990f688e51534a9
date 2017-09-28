@@ -1,0 +1,19 @@
+import java.util.Scanner;
+
+public class Main {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		Maquina maquina = new Maquina();
+		
+		System.out.println("1 - Inserir Moedas\n2 - Fazer Compra\n3 - Visualizar Produtos\n0 - Cancelar Compra");
+		int op = sc.nextInt();
+		
+		while(op != 0){
+			
+		}
+		maquina.receberCredito(moedas);
+
+	}
+
+}
