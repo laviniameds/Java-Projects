@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Move element &apos;Ponto.java&apos; to &apos;Triangulo/src/(default package)&apos;&#x0A;- Original project: &apos;Lampada&apos;&#x0A;- Destination element: &apos;Triangulo/src/(default package)&apos;&#x0A;- Original element: &apos;Ponto.java&apos;&#x0A;- Update references to refactored element" description="Move compilation unit" destination="=Triangulo/src&lt;" element1="/src&lt;{Ponto.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.move" policy="org.eclipse.jdt.ui.moveResources" qualified="false" references="true" stamp="1504490369598" units="1" version="1.0"/>
+</session>

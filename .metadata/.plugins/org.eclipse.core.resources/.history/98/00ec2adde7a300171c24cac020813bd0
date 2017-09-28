@@ -1,0 +1,13 @@
+
+public class Moeda {
+	
+	private double valor;
+	
+	public double calcularValor(){
+		return valor += (valorMoeda*quantidadeMoedas); 
+	}
+	
+	public double getValor(){
+		return valor;
+	}
+}

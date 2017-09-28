@@ -1,0 +1,23 @@
+
+public class Moeda {
+	
+	private int moedas[];
+	private double valor;
+	
+	public double calcularValor(){
+		return valor +=  
+	}
+	
+	public double getValor(){
+		return valor;
+	}
+	
+	public void setMoeda(int moeda){
+		moedas = new int[50];
+		for(int i=0;i<moedas.length;i++){
+			if(moedas[i] == 0)
+				
+				
+		}
+	}
+}

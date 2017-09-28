@@ -1,0 +1,10 @@
+
+public class Maquina {
+	
+	private double credito;
+	private double lucroTotal;
+	
+	public void receberCredito(int moedas){
+		
+	}
+}

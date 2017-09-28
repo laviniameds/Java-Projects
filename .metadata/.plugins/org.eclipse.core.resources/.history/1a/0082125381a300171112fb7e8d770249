@@ -1,0 +1,12 @@
+
+public class Main {
+
+	public static void main(String[] args) {
+		Ponto p = new Ponto();
+		Ponto p = new Ponto(3,6);
+		
+		System.out.println(p.toString());
+
+	}
+
+}

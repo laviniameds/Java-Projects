@@ -1,0 +1,13 @@
+
+public class Moeda {
+	
+	private double credito;
+	
+	public double getValor(){
+		return credito;
+	}
+	
+	public void setMoeda(int moeda){
+		credito += moeda;
+	}
+}

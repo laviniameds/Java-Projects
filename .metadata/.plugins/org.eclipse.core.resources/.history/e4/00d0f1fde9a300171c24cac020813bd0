@@ -1,0 +1,11 @@
+
+public class Maquina {
+	
+	private double lucroTotal;
+	private Moeda moeda;
+	
+	public void receberCredito(int moedas){
+		moeda.setMoeda(moedas);
+		credito
+	}
+}

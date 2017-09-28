@@ -1,0 +1,18 @@
+
+public class Moeda {
+	
+	private int moedas[];
+	private double valor;
+	
+	public double calcularValor(){
+		return valor +=  
+	}
+	
+	public double getValor(){
+		return valor;
+	}
+	
+	public void setMoeda(int moeda){
+		
+	}
+}

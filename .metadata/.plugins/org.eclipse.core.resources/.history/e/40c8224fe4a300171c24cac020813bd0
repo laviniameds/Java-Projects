@@ -1,0 +1,9 @@
+
+public class Maquina {
+	
+	
+	
+	public void receberCredito(Moeda m){
+		
+	}
+}

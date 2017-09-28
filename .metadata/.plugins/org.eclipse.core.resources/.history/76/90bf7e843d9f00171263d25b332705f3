@@ -1,0 +1,16 @@
+import java.util.Scanner;
+
+public class Teste {
+	public static void main(String[] args) {
+		
+		Scanner sc = new Scanner(System.in);
+		StringBuilder x = new StringBuilder(sc.nextLine());
+		StringBuilder i = new StringBuilder(x).reverse().toString();
+		
+		if(cont == x.length())
+			System.out.println(x+ " é polindromo");
+		else 
+			System.out.println(x+ " não é polindromo");
+	}
+
+}

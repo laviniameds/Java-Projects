@@ -1,0 +1,19 @@
+
+public class Moeda {
+	
+	private int valorMoeda[][]; //5, 10, 25, 50 ou 1 real
+	private int quantidadeMoedas;
+	private double valor;
+	
+	public double calcularValor(){
+		return valor +=  
+	}
+	
+	public double getValor(){
+		return valor;
+	}
+	
+	public void setQuantidadeMoedas(int quantidadeMoedas){
+		
+	}
+}
