@@ -7,10 +7,8 @@ public class Maquina {
 	private Produto produtos[];
 	
 	public void receberCredito(int moedas){
-		if((moedas == 1) ||moedas == 50){
-			moeda.setMoeda(moedas);
-			credito += moeda.getValor();
-		}
+		moeda.setMoeda(moedas);
+		credito += moeda.getValor();
 	}
 	
 	public Produto[] visualizarProdutos(){

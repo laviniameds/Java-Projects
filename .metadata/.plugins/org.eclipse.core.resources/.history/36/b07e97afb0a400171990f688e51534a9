@@ -5,7 +5,7 @@ public class Main {
 	public static void Menu(){
 		System.out.println("\n1 - Inserir Moedas\n2 - Fazer Compra\n" +
 				"3 - Visualizar Credito\n4 - Visualizar Produtos\n" +
-				"5 - Visualizar Lucro Total\n6 - Cancelar Compra\n" +
+				"5 -  Visualizar Lucro Total\n6 - Cancelar Compra\n" +
 				"0 - Parar\n");
 	}
 	
