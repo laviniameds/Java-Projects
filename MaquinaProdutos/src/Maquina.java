@@ -12,11 +12,17 @@ public class Maquina {
 	}
 	
 	public Produto[] visualizarProdutos(){
-		Produto aux[] = new Produto[produtos.length];
-		for(int i = 0; i<aux.length;i++)
+		int c = 0;
+		for(int i = 0; i<produtos.length;i++)
 			if(produtos[i] != null)
-				aux[i] = produtos[i];
-		return aux;		
+				c++;
+		Produto aux[] = new Produto[c];
+		c = 0;
+		for(int i = 0; i<produtos.length;i++)
+			if(produtos[i] != null)
+				aux[c++] = produtos[i];
+		produtos = aux;
+		return produtos;		
 	}
 	
 	public double fazerCompra(int codigo){
@@ -31,9 +37,9 @@ public class Maquina {
 				credito = 0;
 				return troco;
 			}
-			else return 0;
+			else return -2;
 		}
-		else return 0;
+		else return -2;
 	}
 	
 	private void removerProduto(Produto p){
@@ -84,6 +90,8 @@ public class Maquina {
 	
 	public Maquina(){
 		produtos = new Produto[30];
+		credito = 0;
+		lucroTotal = 0;
 		moeda = new Moeda();
 		encherMaquina();
 	}

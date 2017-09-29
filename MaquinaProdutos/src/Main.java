@@ -3,9 +3,10 @@ import java.util.Scanner;
 public class Main {
 	
 	public static void Menu(){
-		System.out.println("1 - Inserir Moedas\n2 - Fazer Compra\n" +
+		System.out.println("\n1 - Inserir Moedas\n2 - Fazer Compra\n" +
 				"3 - Visualizar Credito\n4 - Visualizar Produtos\n" +
-				"5 -  Visualizar Lucro Total\n0 - Cancelar Compra");
+				"5 -  Visualizar Lucro Total\n6 - Cancelar Compra\n" +
+				"0 - Parar\n");
 	}
 	
 	public static void ListarProdutos(Produto produtos[]){
@@ -16,7 +17,7 @@ public class Main {
 	}
 	
 	public static void fazerCompra(double troco){
-		if(troco == 0)
+		if(troco == -2)
 			System.out.println("Houve um erro na compra! Produto não encontrado ou " +
 					"crédito inferior ao valor do produto selecionado");
 		else if(troco == -1)
@@ -31,9 +32,10 @@ public class Main {
 		Maquina maquina = new Maquina();
 		
 		Menu();
-		int op = sc.nextInt();
+		int op = -1;
 		
 		while(op != 0){
+			op = sc.nextInt();
 			switch (op) {
 			case 1:
 				System.out.println("Digite '50' para moedas de 50 centavos," +
@@ -43,24 +45,38 @@ public class Main {
 					maquina.receberCredito(moeda);
 					moeda = sc.nextInt();
 				}
+				Menu();
 				break;
 
 			case 2:
 				ListarProdutos(maquina.visualizarProdutos());
-				System.out.println("Digite o codigo do produto que voce quer: ");
-				fazerCompra(maquina.fazerCompra(sc.nextInt()));
+				System.out.println("Digite o codigo do produto que voce quer OU 0 para cancelar a compra: ");
+				int codigo = sc.nextInt();
+				if(codigo == 0)
+					System.out.println("Compra cancelada! Seu troco é de R$ " + maquina.cancelarCompra());
+				else
+					fazerCompra(maquina.fazerCompra(codigo));
+				Menu();
 				break;
 				
 			case 3:
 				System.out.println("Seu crédito é de R$ " +maquina.visualizarCredito());
+				Menu();
 				break;
 
 			case 4:
 				ListarProdutos(maquina.visualizarProdutos());
+				Menu();
 				break;
 				
 			case 5:
 				System.out.println("Lucro Total: " + maquina.visualizarLucroTotal());
+				Menu();
+				break;
+				
+			case 6:
+				System.out.println("Compra cancelada! Seu troco é de R$ " + maquina.cancelarCompra());
+				Menu();
 				break;
 			
 			case 0:
